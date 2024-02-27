@@ -1,0 +1,8 @@
+name = "kadkilat"
+main = "src/index.ts"
+compatibility_date = "2024-02-23"
+
+[[d1_databases]]
+name = "kadkilat-db"
+binding = "DATABASE"
+database_id = "8f96b2a1-4274-441e-9f20-040a4d249b9e"
