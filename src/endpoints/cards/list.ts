@@ -29,12 +29,8 @@ export class CardList extends OpenAPIRoute {
   };
 
   async handle(request: Request, env: any, context: any, data: Record<string, any>) {
-    // Retrieve the validated parameters
-    //const {} = data.query;
-
     // Implement your own object list here
-    const { results } = await env.DATABASE.prepare("SELECT * FROM cards LIMIT 2").all();
-
+    const { results } = await env.DATABASE.prepare("SELECT * FROM cards").all();
 
     return {
       success: true,
