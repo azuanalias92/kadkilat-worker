@@ -30,7 +30,7 @@ export class CardList extends OpenAPIRoute {
 
   async handle(request: Request, env: any, context: any, data: Record<string, any>) {
     // Implement your own object list here
-    const { results } = await env.DATABASE.prepare("SELECT * FROM cards").all();
+    const { results } = await env.DATABASE.prepare("SELECT * FROM cards ORDER BY RANDOM()").all();
 
     return {
       success: true,
